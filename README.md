@@ -1,2 +1,2 @@
 # Python
-开智学堂 Python 四期基础班学习
+开智学堂 Python 基础班四期学习
