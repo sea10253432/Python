@@ -1,7 +1,9 @@
+# _*_ coding: utf-8 _*_
+
 from sys import argv
 
 script, user_name = argv
-prompt = '> '
+prompt = ': '
 
 print "Hi %s, I'm the %s script." % (user_name, script)
 print "I'd like to ask you a few questions."
@@ -14,6 +16,7 @@ lives = raw_input(prompt)
 print "What kind of computer do you have?"
 computer = raw_input(prompt)
 
+# 三引号字符串也能用格式化字符
 print '''
 Alright, so you said %r about liking me.
 You live in %r. Not sure where that is.
