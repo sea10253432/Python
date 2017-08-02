@@ -15,7 +15,9 @@ target = open(filename, 'r+')
 
 
 print "Truncating the file. Goodbye!"
-target.truncate(3);
+target.truncate()
+target.close()
+
 '''
 print "Now I'm going to ask you for three lines."
 #读取3行输入
@@ -32,8 +34,9 @@ target.write(line2)
 target.write("\n")
 target.write(line3)
 target.write("\n")
-'''
+
 
 #关闭文件
 print "And finally, we close it."
 target.close()
+'''
