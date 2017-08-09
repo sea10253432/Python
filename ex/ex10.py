@@ -17,13 +17,13 @@ I'll do a list:
 """
 
 # 打印字符串
-print tabby_cat
-print persian_cat
-print backslash_cat
-print fat_cat
+print(tabby_cat)
+print(persian_cat)
+print(backslash_cat)
+print(fat_cat)
 
 # %r 打印出来的是你作为程序员写在脚本里的东西，而%s 打印的是你作为用户应该看到的东西
 
-print tabby_cat * 3
-print "persian_cat %s" % persian_cat
-print "persian_cat %r" % persian_cat
+print(tabby_cat * 3)
+print("persian_cat %s" % persian_cat)
+print("persian_cat %r" % persian_cat)

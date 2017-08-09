@@ -1,23 +1,61 @@
-stuff = {'name' : 'Zed', 'age' : 36, 'height': 6*12+2}
-print stuff['name']
+# create a mapping of state to abbreviation
+states = {
+	'Oregon': 'OR',
+	'Florida': 'FL',
+	'California': 'CA',
+	'New Your': 'NY',
+	'Michigan': 'MI'
+}
 
-class Song(object):
+# create a basic set of states and some cities in them
+cities = {
+	'CA': 'San Francisco',
+	'MI': 'Detroit',
+	'FL': 'Jacksonville'
+}
 
-	def __init__(self, lyrics):
-		self.lyrics = lyrics
-		
-	def sing_me_a_song(self):
-		for line in self.lyrics:
-			print line
-			
-happy_bday = Song(["Happy birthday to you",
-      			"I don't want to get sued",
-      			"So I'll stop right there"])
-      			
-bulls_on_parade = Song(["They rally around the family",
-				"With pockets full of shells"])
-				
-happy_bday.sing_me_a_song()
+# add some more cities
+cities['NY'] = 'New York'
+cities['OR'] = 'Portland'
 
-bulls_on_parade.sing_me_a_song()
+print('-' * 10)
+print("NY state has: ", cities['NY'])
+print("OR state has: ", cities['OR'])
 
+# print some states
+print('-' * 10)
+print("Michigan's abbreviation is: ", states['Michigan'])
+print("Florida's abbreviation is: ", states['Florida'])
+
+# do it by using the state then cities dict
+print('_' * 10)
+print("Michigan has: ", cities[states['Michigan']])
+print("Florida has: ", cities[states['Florida']])
+
+# print every state abbreviation
+print('_' * 10)
+for state, abbrev in states.items():
+	print("%s is abbreviated %s" % (state, abbrev))
+
+# print every city in state
+print('_' * 10)
+for abbrev, city in cities.items():
+	print("%s has the city %s" % (abbrev, city))
+
+# now do both at the same time
+print('_' * 10)
+for state, abbrev in states.items():
+	print("%s state is abbreviated %s and the city has %s" % (
+	state, abbrev, cities[abbrev]
+	))
+
+print('_' * 10)
+# safely get a abbreviation by state that might not be there
+state = states.get('Texas', None)
+
+if not state:
+	print("Sorry, no Texas.")
+
+# get a city with a default values
+city = cities.get('TX', 'Does Not Exist')
+print("The city for the state 'TX' is: %s" % city)

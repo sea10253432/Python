@@ -1,48 +1,20 @@
-# coding:utf-8 
+"""class Song """
+class Song(object):
+    """docstring fo Song."""
+    def __init__(self, lyrics):
+        self.lyrics = lyrics
 
-class Animal(object):
-	## [??]
-	pass
-	
-class Dog(Animal):
+    def sing_me_a_song(self):
+        for line in self.lyrics:
+            print(line)
 
-	def __init__(self, name):
-	
-		self.name = name
-		
-class Cat(Animal):
+happy_bday = Song(["Happy birthday to you",
+                    "I don't want to get sued",
+                    "So I'll stop ritht there"])
 
-	def __init__(self, name):
-		self.name = name
-		
-class Person(object):
+bulls_on_parade = Song(["They rally around the family",
+                        "With pockets full of shells"])
 
-	def __init__(self, name):
-	
-		self.name = name
-		self.pet = None
-		
-class Employee(Person):
+happy_bday.sing_me_a_song()
 
-	def __init__(self, name, salary):
-		super(Employee, self).__init__(name)
-		
-		self.salary = salary
-		
-		
-class Fish(object):
-	pass
-	
-class Salmon(Fish):
-	pass
-	
-class Halibut(Fish):
-	pass
-	
-## rover 是一条狗
-rover = Dog("Rover")
-
-satan = Cat("Satan")
-
-mary = Person("Mary") 
-	
+bulls_on_parade.sing_me_a_song()
